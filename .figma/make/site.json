@@ -1,0 +1,10 @@
+{
+  "description": "Connects Bengaluru daily-wage workers with nearby jobs and helps employers find skilled, available workers through transparent matching and fair-pay details.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

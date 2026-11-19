@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;600;700;800&family=Noto+Sans:wght@400;500;600;700;800;900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans", "Noto Sans Kannada", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    background: #fffbf5;
+  }
+
+  body {
+    min-width: 320px;
+    min-height: 100vh;
+    color: #2e2a3d;
+    background: #fffbf5;
+    font-family: "Noto Sans", "Noto Sans Kannada", system-ui, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button,
+  select,
+  input {
+    touch-action: manipulation;
+  }
+
+  button:focus-visible,
+  select:focus-visible,
+  input:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 2px;
+  }
+}
+
+.score-ring {
+  --score: 0deg;
+  --ring: #16855b;
+  position: relative;
+  display: grid;
+  flex: none;
+  place-content: center;
+  border-radius: 9999px;
+  color: #2e2a3d;
+  background:
+    radial-gradient(closest-side, white 73%, transparent 74% 99%, white 100%),
+    conic-gradient(var(--ring) var(--score), #e5e2dc 0);
+  font-weight: 900;
+  text-align: center;
+}
+
+.score-ring small {
+  display: block;
+  margin-top: -2px;
+  color: #777184;
+  font-size: 9px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.map-pattern {
+  background-image:
+    linear-gradient(25deg, transparent 45%, rgba(255, 255, 255, 0.55) 46% 49%, transparent 50%),
+    linear-gradient(115deg, transparent 62%, rgba(255, 255, 255, 0.6) 63% 66%, transparent 67%);
+  background-size:
+    110px 90px,
+    140px 120px;
+}
+
+input[type="range"] {
+  min-height: 44px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
